@@ -30,7 +30,13 @@ public class Main {
             String number = Integer.toString(i + 1);
             grooves[i].setName("Канавка " + number);
         }
-        piglet.wasInTheWater(grooves);
+        try
+        {
+            piglet.wasInTheWater(grooves);
+        } catch (NoGroovesException e)
+        {
+            e.printStackTrace();
+        }
 
 
         piglet.recollectMemories();
